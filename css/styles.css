@@ -475,7 +475,7 @@ svg{
 .portfolio__net>li:focus .overlay{
     transform: translateY(-294px);
 }
-/*чорточки меню*/
+/*чорточки меню***/
 .nav__style a{
     position: relative;
 }
