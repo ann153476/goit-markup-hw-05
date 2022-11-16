@@ -43,8 +43,7 @@ img{
 }
 /*для всех*/
 a{
-    text-decoration:none;
-    color: #212121;  
+    text-decoration:none;  
 }
 ul{
     list-style: none;
@@ -71,6 +70,7 @@ p{
    color: #FFFFFF;
 }
 .header{
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid #ECECEC;
 }
@@ -88,8 +88,10 @@ p{
     margin-right: 93px;
 }
 .nav__style{
-    display: flex;
     font-weight: 500;
+}
+.nav__style a{
+    display: flex;
     padding: 32px 0;
 }
 .nav__style li:not(:last-child){
@@ -447,36 +449,46 @@ svg{
     position: fixed;
     right: 8px;top: 8px;cursor: pointer;
 }
-/*TEST...............*/
-.portfolio__net>li{
+/*анімація 2ст*/
+.otstyp{
+    padding: 300px;
+}
+.box{
     position: relative;
-}
-.a{
-    position: absolute;
     overflow: hidden;
-   
 }
-@keyframes up {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-.portfolio__overlay{    
+.overlay{
     position: absolute;
     box-sizing: border-box;
-    width: 370px;height:294px;
     padding: 63px 24px;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.55;
+    line-height: 156%;
     letter-spacing: 0.03em;
-    color:#FFFFFF;
-    background-color:#2196F3E5;
-    animation: up 250ms cubic-bezier(0.4, 0, 0.2, 1)  infinite;
+    color: #FFFFFF;
+    background-color: #2196F3E5;
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
-
-
-  
+.portfolio__net>li:hover .overlay,
+.portfolio__net>li:focus .overlay{
+    transform: translateY(-294px);
+}
+/*чорточки меню*/
+.nav__style a{
+    position: relative;
+}
+.nav__style a:hover::after,
+.nav__style a:focus::after,
+.active::after{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
