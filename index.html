@@ -36,7 +36,16 @@
        <section class="grey__block max__width">
             <div class="container">
            <h1 class="big__text">Ефективні рішення для вашого бізнесу</h1>
-           <button type="button" class="get__service">Замовити послугу</button>
+           <button type="button" class="get__service" data-modal-open>Замовити послугу</button>
+            </div>
+            <div>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button class="modal__button" data-modal-close>
+                            <svg width="30" height="30"><use href="./img/x.svg#icon-x"></use></svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -82,16 +91,15 @@
                <p class="benefits__p">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
            </li>
        </ul>
-       
 </div>
 </section> 
 <section>
     <div class="container">
         <h2 class="title__text">Чим ми займаємося</h2>
        <ul class="photo__block">
-       <li><img src="./img/img1.jpg" alt="руки за робочим столом" width="370"></li>
-       <li><img src="./img/img2.jpg" alt="телефон і ноутбук у руках" width="370"></li>
-       <li><img src="./img/img3.jpg" alt="планшет у руці" width="370"></li>
+       <li><img src="./img/img1.jpg" alt="руки за робочим столом" width="370"><div class="label">Десктопні додатки</div></li>
+       <li><img src="./img/img2.jpg" alt="телефон і ноутбук у руках" width="370"><div class="label">Мобільні додатки</div></li>
+       <li><img src="./img/img3.jpg" alt="планшет у руці" width="370"><div class="label">Дизайнерські рішення</div></li>
        </ul>
 </div></section>
 <section class="section not__realy__white">
@@ -236,6 +244,7 @@
         </ul></div> 
     </div>
     </footer>
+<script src="./js/modal.js"></script>
 </body>
 </html>
 
