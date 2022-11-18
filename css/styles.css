@@ -122,11 +122,6 @@ p {
 .m__t__style__up {
   color: #757575;
   font-weight: 500;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.m__t__style__up:hover,
-.m__t__style__up:focus {
-  color: #2196f3;
 }
 .contact__up__please {
   margin-left: auto;
@@ -288,7 +283,12 @@ p {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.buttons__portfolio button{
+  transition-property: background-color, box-shadow, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .buttons__portfolio button:hover,
 .buttons__portfolio button:focus {
@@ -351,15 +351,15 @@ svg {
   fill: currentColor;
 }
 /*іконки мило і тел*/
-.icon__m__t{
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+.m__t__style__up,
+.m__t__style__down {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon__m__t:hover,
-.icon__m__t:focus,
+.m__t__style__up:hover,
+.m__t__style__up:focus,
 .m__t__style__down:hover,
 .m__t__style__down:focus {
   color: #2196f3;
-  
 }
 
 /*іконки месенджеров*/
@@ -369,6 +369,7 @@ svg {
   height: 44px;
   display: flex;
   justify-content: space-between;
+  
 }
 .ico__messenger a {
   width: 44px;
@@ -378,7 +379,10 @@ svg {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
-  transition: color 5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ico__messenger svg{
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ico__messenger a:hover,
 .ico__messenger a:focus {
@@ -417,10 +421,13 @@ svg {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients__a:not(:last-child) {
   margin-right: 30px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients svg{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients__a:hover,
 .clients__a:focus {
@@ -466,7 +473,7 @@ svg {
   bottom: 0;
   background-color: #00000033;
   opacity: 1;
-  transition: 3s linear;
+  transition: 2s linear;
 }
 .backdrop.is-hidden {
   opacity: 0;
